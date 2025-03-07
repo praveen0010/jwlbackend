@@ -40,7 +40,7 @@
 // })
 
 const express = require("express");
-const errorHandler = require("../jwlbackend/middelware/errormiddelware");
+const errorHandler = require("./middelware/errormiddelware");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 const session = require("express-session");
