@@ -120,19 +120,21 @@ const getusers = asyncHandler(async (req, res, next) => {
     // res.status(500).json({ message: "Server Error" });
   }
 });
+const getuser = asyncHandler(async (req, res, next) => {
+  try {
+    const _id = req.body.userid;
+    console.log(_id);
+    const user = await jwlUser.findOne({ _id });
+    if (user) {
+      res.status(200).json(user);
+    } else {
+      res.status(200).json({ message: "user not found" });
+    }
+  } catch (error) {
+    console.log("Error Fetching Clients", error);
+    next(error);
+    // res.status(500).json({ message: "Server Error" });
+  }
+});
 
-const generateToken = (res, userId) => {
-  const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
-    expiresIn: "1d", // Token expires in 1 day
-  });
-
-  // Set token in an HTTP-only cookie
-  res.cookie("token", token, {
-    httpOnly: true, // Prevent JavaScript from accessing the cookie
-    secure: process.env.NODE_ENV === "production", // Secure only in production
-    sameSite: "strict", // Prevent CSRF attacks
-    maxAge: 24 * 60 * 60 * 1000, // 1 day
-  });
-};
-
-module.exports = { Login, Logout, Checkuser, getusers, deleteAll };
+module.exports = { Login, Logout, Checkuser, getusers, getuser, deleteAll };

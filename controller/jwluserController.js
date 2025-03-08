@@ -105,11 +105,11 @@ const forgotPassword = asyncHandler(async (req, res) => {
               <a href="${resetUrl}" target="_blank">Reset Your Password</a>
             </div>
             <p class="bellow-content">If you did not request a password reset, <br/> please ignore this email or contact support if you have questions.</p>
-            <p class="bottom-style">Thank you,<br>ClinicManage Support</p>
+            <p class="bottom-style">Thank you,<br>Salem Jewellery Support</p>
           </div>
 
           <div class="footer">
-            <p>&copy; 2024 ClinicManage. All rights reserved.</p>
+            <p>&copy; 2024 Salem Jewellery. All rights reserved.</p>
           </div>
         </div>
 
@@ -206,12 +206,12 @@ const resetPassword = asyncHandler(async (req, res) => {
               <a href="${loginUrl}" target="_blank">Login</a>
             </div>
 
-        <p class="bellow-content">Thanks for Choosing ClinicManage. <br/> Enjoy using ClinicManage and increase productivity. </p>
-        <p class="bottom-style">Thank you,<br>ClinicManage Support</p>
+        <p class="bellow-content">Thanks for Choosing Salem Jewellery. <br/> Enjoy using Salem Jewellery and increase productivity. </p>
+        <p class="bottom-style">Thank you,<br>Salem Jewellery Support</p>
       </div>
 
       <div class="footer">
-        <p>&copy; 2024 ClinicManage. All rights reserved.</p>
+        <p>&copy; 2024 Salem Jewellery. All rights reserved.</p>
       </div>
     </div>
 

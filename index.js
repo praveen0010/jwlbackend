@@ -77,7 +77,7 @@ app.use(
     store: store, // Store sessions in MongoDB
     cookie: {
       httpOnly: true,
-      secure: false, // Change to true in production (for HTTPS)
+      secure: true, // Change to true in production (for HTTPS)
       sameSite: "strict",
       maxAge: 1000 * 60 * 60, // 1 hour
     },
