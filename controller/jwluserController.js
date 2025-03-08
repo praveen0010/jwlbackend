@@ -36,6 +36,7 @@ const createuser = asyncHandler(async (req, res, next) => {
         .json({ message: "User data is not valid", success: true });
     }
   } catch (error) {
+    console.log(error.message);
     next(error);
   }
 });
