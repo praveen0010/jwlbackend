@@ -59,7 +59,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
     console.log(registeredUser, "register user");
 
-    const resetUrl = `http://localhost:3000/reset-password?token=${resetToken}`;
+    const resetUrl = `https://homepagejwlnew.netlify.app/reset-password?token=${resetToken}`;
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -72,7 +72,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
     const mailOptions = {
       from: "sdmedia.connect@gmail.com",
       to: email,
-      subject: "ClinicManage Password Reset Link",
+      subject: "Salem jewellery Password Reset Link",
       // text: `Reset Link ${resetUrl}`
       html: `
       <!DOCTYPE html>
@@ -153,7 +153,7 @@ const resetPassword = asyncHandler(async (req, res) => {
 
   await user.save();
 
-  const loginUrl = `http://localhost:3000/login`;
+  const loginUrl = `https://homepagejwlnew.netlify.app/Login`;
 
   const transporter = nodemailer.createTransport({
     service: "Gmail",

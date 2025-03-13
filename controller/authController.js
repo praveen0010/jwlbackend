@@ -123,10 +123,10 @@ const getusers = asyncHandler(async (req, res, next) => {
 const getuser = asyncHandler(async (req, res, next) => {
   try {
     const _id = req.body.userid;
-    console.log(_id);
     const user = await jwlUser.findOne({ _id });
+
     if (user) {
-      res.status(200).json(user);
+      res.status(200).json({ user });
     } else {
       res.status(200).json({ message: "user not found" });
     }
